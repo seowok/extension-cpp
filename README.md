@@ -20,6 +20,8 @@ There are a few "sights" you can metaphorically visit in this repository:
 
 FOR WINDOWS !!!!
 ================
+But, Lapack and Blah are not supported for windows.
+---------------------------------------------------
 *set  "VS150COMNTOOLS=C:\Program Files (x86)\Microsoft Visual  Studio\2017\Community\VC\Auxiliary\Build"
 *set  CMAKE_GENERATOR=Visual Studio 15 2017 Win64
 *set  DISTUTILS_USE_SDK=1
@@ -31,12 +33,9 @@ FOR WINDOWS !!!!
 *call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" x64 -vcvars_ver=14.11
 
 
-torch/utils/cpp_extension.py : [line   94]  decode()   >>   decode('latin-1')
------------------------------------------------------------------------------
-torch/utils/cpp_extension.py : [line 223]  '/MD'   >>   '/MT'
--------------------------------------------------------------
-lltm_cuda_kernel.cu : [line28] scalar_t 추가  >>  fmax(scalar_t(0.0), z) + fmin(scalar_t(0.0), alpha * (exp(z) - scalar_t(1.0)))
---------------------------------------------------------------------------------------------------------------------------------
+## torch/utils/cpp_extension.py : [line   94]  decode()   >>   decode('latin-1')
+## torch/utils/cpp_extension.py : [line 223]  '/MD'   >>   '/MT'
+## lltm_cuda_kernel.cu : [line28] scalar_t 추가  >>  fmax(scalar_t(0.0), z) + fmin(scalar_t(0.0), alpha * (exp(z) - scalar_t(1.0)))
 
 python setup.py install
 python jit.py
